@@ -2,7 +2,7 @@
 
 - name: SVETLANA LAZEBNIK
   role: Project Guide
-  img: /img/lana17_square.jpg
+  img: /img/members/lana17_square.jpg
   bio: I received my Ph.D. at UIUC in May 2006 under the supervision of Prof. Jean Ponce. From August 2007 to December 2011 I was an assistant professor at the University of North Carolina at Chapel Hill, and as of January 2012, I have returned as faculty to U of I. My research specialty is computer vision. The main themes of my research include scene understanding, joint modeling of images and text, large-scale photo collections, and machine learning techniques for visual recognition problems. Current and former sources of support for my research include the National Science Foundation (under grants IIS 1718221, IIS 1563727, IIS 1228082, CIF 1302438, and IIS 0916829), Microsoft Research Faculty Fellowship, Xerox University Affairs Committee Grants, DARPA Computer Science Study Group, Sloan Foundation Fellowship, Google Research Award, ARO, and Adobe.
   url: http://slazebni.cs.illinois.edu
   visible: true
