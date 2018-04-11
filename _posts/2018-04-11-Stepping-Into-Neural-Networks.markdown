@@ -17,9 +17,14 @@ The TensorFlow  [`layers module`](https://www.tensorflow.org/api_docs/python/tf/
 ## Getting Started
 
 Let's set up the skeleton for our TensorFlow program. Create a file called  `cnn_mnist.py`, and add the following code:
+{% highlight python %}
 
-    `from __future__ import absolute_importfrom __future__ import divisionfrom __future__ import print_function# Imports
-    import numpy as npimport tensorflow as tf
+    from __future__ import absolute_import
+    from __future__ import division
+    from __future__ import print_function
+    # Imports
+    import numpy as np
+    import tensorflow as tf
 
     tf.logging.set_verbosity(tf.logging.INFO)
 
@@ -27,7 +32,7 @@ Let's set up the skeleton for our TensorFlow program. Create a file called  `cnn
 
     if __name__ ==  "__main__": tf.app.run()
 
-`
+{% endhighlight %}
 
 As you work through the tutorial, you'll add code to construct, train, and evaluate the convolutional neural network. The complete, final code can be  [found here](https://www.github.com/tensorflow/tensorflow/blob/r1.7/tensorflow/examples/tutorials/layers/cnn_mnist.py).
 
