@@ -1,5 +1,5 @@
 ---
-layout:     post
+layout:     notebook
 title:      Stepping Into Neural Networks
 author:     Naman Shukla
 tags: 		jupyter workflows template
