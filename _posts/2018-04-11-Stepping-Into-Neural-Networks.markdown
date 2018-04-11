@@ -1,5 +1,5 @@
 ---
-layout:     notebook
+layout:     post
 title:      Stepping Into Neural Networks
 author:     Naman Shukla
 tags: 		jupyter workflows template
@@ -342,6 +342,6 @@ To learn more about TensorFlow Estimators and CNNs in TensorFlow, see the follow
 -   [Creating Estimators in tf.estimator](https://www.tensorflow.org/get_started/custom_estimators)  provides an introduction to the TensorFlow Estimator API. It walks through configuring an Estimator, writing a model function, calculating loss, and defining a training op.
 -   [Convolutional Neural Networks](https://www.tensorflow.org/tutorials/deep_cnn)  walks through how to build a MNIST CNN classification model  _without estimators_using lower-level TensorFlow operations.
 
-# Source
+### Source
 
 Tensorflow Tutorial 
