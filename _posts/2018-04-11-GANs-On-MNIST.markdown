@@ -33,7 +33,7 @@ _Sample images from the generative adversarial network that we'll build in this 
 
 Generative adversarial networks consist of two models: a generative model and a discriminative model.
 
-![caption](notebook-images/GAN_Overall.png)
+![caption](../img/notebook-images/GAN_Overall.png)
 
 The discriminator model is a classifier that determines whether a given image looks like a real image from the dataset or like an artificially created image. This is basically a binary classifier that will take the form of a normal convolutional neural network (CNN).
 
