@@ -7,5 +7,6 @@ subtitle:   Simple implementation of CNN to make getting things started
 category:  project1
 
 notebookfilename: intro
-visualworkflow: true
+visualworkflow: false
 ---
+bla bla bla
