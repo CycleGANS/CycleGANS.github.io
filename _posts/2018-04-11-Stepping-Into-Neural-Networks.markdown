@@ -3,11 +3,9 @@
 layout:     notebook
 title:      Stepping Into Neural Networks
 author:     Naman Shukla
-<<<<<<< HEAD
 tags:       jupyter workflows template
 subtitle:   Simple implementation of CNN to make getting things started
 category:  project1
-
 ---
 
 # A Guide to TF Layers: Building a Convolutional Neural Network
