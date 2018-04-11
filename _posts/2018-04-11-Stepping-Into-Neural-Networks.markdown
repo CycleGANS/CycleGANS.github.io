@@ -1,13 +1,11 @@
-
 ---
-layout:     notebook
+layout:     post
 title:      Stepping Into Neural Networks
 author:     Naman Shukla
-tags:       jupyter workflows template
-subtitle:   Simple implementation of CNN to make getting things started
+tags: 		jupyter workflows template
+subtitle:  	Simple implementation of CNN to make getting things started
 category:  project1
 ---
-
 # A Guide to TF Layers: Building a Convolutional Neural Network
 
 The TensorFlow  [`layers`  module](https://www.tensorflow.org/api_docs/python/tf/layers)  provides a high-level API that makes it easy to construct a neural network. It provides methods that facilitate the creation of dense (fully connected) layers and convolutional layers, adding activation functions, and applying dropout regularization. In this tutorial, you'll learn how to use  `layers`  to build a convolutional neural network model to recognize the handwritten digits in the MNIST data set.
