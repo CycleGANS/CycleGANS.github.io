@@ -342,14 +342,6 @@ To learn more about TensorFlow Estimators and CNNs in TensorFlow, see the follow
 -   [Creating Estimators in tf.estimator](https://www.tensorflow.org/get_started/custom_estimators)  provides an introduction to the TensorFlow Estimator API. It walks through configuring an Estimator, writing a model function, calculating loss, and defining a training op.
 -   [Convolutional Neural Networks](https://www.tensorflow.org/tutorials/deep_cnn)  walks through how to build a MNIST CNN classification model  _without estimators_using lower-level TensorFlow operations.
 
-Except as otherwise noted,
-=======
-tags: 		CNN GettingStarted DeepNets
-subtitle:   Simple implementation of CNN to make getting things started
-category:  project1
+# Source
 
-
-visualworkflow: false
----
-bla bla bla
->>>>>>> 00a12970a68d627ac3f2984cc71799aa2279e56f
+Tensorflow Tutorial 
