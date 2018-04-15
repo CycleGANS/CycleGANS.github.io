@@ -7,7 +7,7 @@ subtitle:   Generating MNIST Dataset With GANS
 category:  project1
 ---
 <!-- # Generative Adversarial Networks for Beginners
-## Build a neural network that learns to generate handwritten digits.
+## Generating MNIST dataset from noise.
 ### By [Jon Bruner](https://github.com/jonbruner) and [Adit Deshpande](https://github.com/adeshpande3)
 
 This notebook accompanies [the O'Reilly interactive tutorial on generative adversarial networks](https://www.oreilly.com/learning/generative-adversarial-networks-for-beginners). See the original tutorial to run this code in a pre-built environment on O'Reilly's servers with cell-by-cell guidance, or run this notebook on your own machine.
