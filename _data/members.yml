@@ -7,11 +7,19 @@
   url: http://slazebni.cs.illinois.edu
   visible: true
 
+- name: Harshad Rai
+  role: Team Lead
+  img: https://avatars0.githubusercontent.com/u/23039858?s=400&v=4
+  github: harshadrai
+  bio: Hi ! I am secong year advanced analytics master’s student in the school of Industrial Engineering at University of Illinois at Urbana - Champaign.
+  visible: true
+
 - name: Naman Shukla
-  role: Data Scientist
+  role: Data Manager
   img: https://avatars3.githubusercontent.com/u/32119068?s=400&v=4
   github: namanUIUC
-  bio: Hi! I am first year advanced analytics master’s student in the school of Industrial Engineering at University of Illinois at Urbana - Champaign. I earned my undergraduate degree in Chemical Engineering at Indian Institute of Technology (IIT) Hyderabad, India. I am fascinated by Statistical Learning and Computer Vision.
+  bio: Hi! I am first year advanced analytics master’s student in the school of Industrial Engineering at University of Illinois at Urbana - Champaign. My responsibilites in this team include data retrieval, tensorflow implementations and website management. I am intersted in statistical learning and Computer Vision.
+  url: http://namanuiuc.github.io
   visible: true
 
 - name: Ziyu (Yulia) Zhou
@@ -21,11 +29,6 @@
   bio: Hello! I am first year advanced analytics and computational engineering master’s student in the school of Industrial Engineering at University of Illinois at Urbana - Champaign.
   visible: true
 
-- name: Harshad Rai
-  role: Machine Lerning
-  img: https://avatars0.githubusercontent.com/u/23039858?s=400&v=4
-  github: harshadrai
-  bio: Hi ! I am secong year advanced analytics master’s student in the school of Industrial Engineering at University of Illinois at Urbana - Champaign.
-  visible: true
+
 
 
