@@ -48,7 +48,7 @@ The <b>Objective</b> of this architecture contains two kinds of losses:
     </ul>
 <ul>
     
-#### Adversarial Losses: </b>
+<b> Adversarial Losses: </b>
 <ul>
 Adversarial losses need to be applied to both mapping functions.  
 
