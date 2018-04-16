@@ -26,7 +26,7 @@ GANs are neural networks that learn to create synthetic data similar to some kno
 
 Those examples are fairly complex, but it's easy to build a GAN that generates very simple images. In this tutorial, we'll build a GAN that analyzes lots of images of handwritten digits and gradually learns to generate new images from scratch—*essentially, we'll be teaching a neural network how to write*.
 
-<img src="https://github.com/CycleGANS/CycleGANS.github.io/blob/master/img/notebook-images/gan-animation.gif?raw=true" />
+<img src="https://github.com/CycleGANS/CycleGANS.github.io/blob/master/img/Naman/notebook-images/gan-animation.gif?raw=true" />
 _Sample images from the generative adversarial network that we'll build in this tutorial. During training, it gradually refines its ability to generate digits._
 
 ## GAN architecture
