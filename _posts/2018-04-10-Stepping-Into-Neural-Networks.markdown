@@ -59,7 +59,7 @@ The high level pipeline for our CNN Classifier is :
 
 | Layer       | Shape                                                        | Activation                            |
 | ----------- | ------------------------------------------------------------ | ------------------------------------- |
-| input       |                                                              |                                       |
+| input       | Batch, 28, 28, 1                                             | NA                                    |
 | Convolution | Applies 32 5x5 filters (extracting 5x5-pixel subregions)     | ReLU                                  |
 | Pooling     | Performs max pooling with a 2x2 filter and stride of 2 (which specifies that pooled regions do not overlap) | NA                                    |
 | Convolution | Applies 64 5x5 filters                                       | ReLU                                  |
