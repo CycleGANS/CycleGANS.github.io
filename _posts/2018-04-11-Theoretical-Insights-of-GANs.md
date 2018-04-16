@@ -23,7 +23,7 @@ To understand this a little more in depth, let us look at a few notations and un
 <b>$p_g$</b> = Generator's Distribution over data <b>$x$</b>  
 <b>$p_z(z)$</b> = Prior on input noise variables  
 <b>$G(z;\theta_g)$</b> = Mapping to data space where <b>$G$</b> is a differentiable function represented by a multilayer perceptron with parameters <b>$\theta_g$</b>  
-<b>$D(x),\theta_d$</b> = Second multilayer perceptron (Discriminator) that outputs a single scalar  
+<b>$D(x,\theta_d)$</b> = Second multilayer perceptron (Discriminator) that outputs a single scalar  
 <b>$D(x)$</b> = Probability that <b>$x$</b> came from data rather than <b>$p_g$</b>
 
 The task for the Generator network is to approximate a function <b>$G(z;\theta_g)$</b> that maps random noise to a range whose probability distribution <b>$p_g$</b> is the same as the probability distribution of the real data <b>$x$</b>.
