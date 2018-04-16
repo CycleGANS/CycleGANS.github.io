@@ -61,9 +61,9 @@ The high level pipeline for our CNN Classifier is :
 | ----------- | ------------------------------------------------------------ | ------------------------------------- |
 | input       | Batch, 28, 28, 1                                             | NA                                    |
 | Convolution | Applies 32 5x5 filters (extracting 5x5-pixel subregions)     | ReLU                                  |
-| Pooling     | Performs max pooling with a 2x2 filter and stride of 2 (which specifies that pooled regions do not overlap) | NA                                    |
+| Pooling     | Performs max pooling with a 2x2 filter and stride of 2       | NA                                    |
 | Convolution | Applies 64 5x5 filters                                       | ReLU                                  |
-| Pooling     | Again, performs max pooling with a 2x2 filter and stride of 2 | NA                                    |
+| Pooling     | Again, performs max pooling with a 2x2 filter & stride of 2  | NA                                    |
 | Dense       | 1,024 neurons                                                | dropout rate 0.4                      |
 | Logit       | 10 neurons                                                   | one for each digit target class (0–9) |
 
