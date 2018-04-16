@@ -1,8 +1,8 @@
 ---
 layout:     notebook
-title:      Cycle GANs
+title:      Theoretical Understanding of CGANs 
 author:     Harshad Rai
-tags:       CycleGANS GettingStarted ComputerVision UnpairedImage2Image ImagetoImage Image2Image
+tags:       CycleGANS GettingStarted ComputerVision UnpairedImage2Image ImagetoImage Image2Image Theory
 subtitle:   Understanding Cyclce GANs
 category:  project1
 ---
