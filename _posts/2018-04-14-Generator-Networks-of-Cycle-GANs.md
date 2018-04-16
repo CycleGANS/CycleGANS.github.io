@@ -36,7 +36,7 @@ The Generator used in this implementation involves three parts to it:
 <ul>
     The concept of Residual Blocks was introduced by Kaiming He et. al. in their paper titled ["Deep Residual Learning for Image Recognition"](https://arxiv.org/pdf/1512.03385.pdf).  
     Each Residual Block consists of two Convolution Layers. The first Convolution Layer is followed by Batch Normalization and ReLu activation. The output is then passed through a second Convolution Layer followed by Batch Normalization. The output obtained from this is then added to the original input.  
-    <img src= "{{ "/img/ResidualBlock.png " | prepend: site.baseurl }}" style="width: x%; margin-left: y%; margin-right: z%;">
+    <img src= "{{ "/img/Harshad/ResidualBlock.png " | prepend: site.baseurl }}" style="width: x%; margin-left: y%; margin-right: z%;">
     To understand this in more depth, you can look at this [blog](http://torch.ch/blog/2016/02/04/resnets.html) where the above image was taken from.  
     Each convolution layer in residual blocks has a 3x3 filter.  
     The number of Residual Blocks depens on the size of the input image. For 128x128 images, 6 residual blocks are used and for 256x256 and higher dimensional images, 9 residual blocks are used.
@@ -49,7 +49,7 @@ The Generator used in this implementation involves three parts to it:
     The first layer is followed by Batch Normalization and ReLU activation while the second convolution layer is followed by a Scaled Tanh function so that the values can fall between [0,255] as this layer is the output layer.
     </ul>
 The entire Feedforward Generator Network starts off with Downsampling, followed by Residual Blocks and ends with Upsampling.
-<img src= "{{ "/img/Generator.png " | prepend: site.baseurl }}" style="width: x%; margin-left: y%; margin-right: z%;">
+<img src= "{{ "/img/Harshad/Generator.png " | prepend: site.baseurl }}" style="width: x%; margin-left: y%; margin-right: z%;">
 
 The benefits of using such a network is that it is computationally less expensive compared to the naive implementation and provides large effective receptive fields that lead to high quality style transfers in the output images.
 
