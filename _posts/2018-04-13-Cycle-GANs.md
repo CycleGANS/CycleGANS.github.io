@@ -35,7 +35,8 @@ Lets dive right into the theory of this paper to understand what exactly happens
     <li> <b>$G: X→Y$</b> </li>
     <li> <b>$F: Y→X$</b> </li>
     </ul>
-<b>Discriminators</b>:<ul>
+<b>Discriminators</b>:
+<ul>
     <li><b>$D_X→$</b> aims to distinguish between images <b>$\{x\}$</b> and translated images <b>$F(y)$</b> </li>
     <li><b>$D_Y→$</b> aims to distinguish between images <b>$\{y\}$</b> and translated images <b>$G(x)$</b> </li>
 </ul>
@@ -44,7 +45,7 @@ The <b>Objective</b> of this architecture contains two kinds of losses:
 <ul>
     <li> <b>Adversarial Losses</b> → for matching the distribution of general images to the data distribution in the target domain.</li>
     <li><b>Cycle Consistency Losses</b> → to prevent the learned mappings <b>$G$</b> and <b>$F$</b> from contradicting each other.
-        </ul>
+</ul>
   
 ##### Adversarial Losses:
 <ul>
