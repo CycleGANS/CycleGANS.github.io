@@ -310,6 +310,10 @@ python3 main.py
 
 ### Results
 
+> **Note** : Currently we are running our code on CPU. So we don't have full results (only 250 epochs out of 1000 epochs). The code is still running while you are reading this post. We will update the results soon. Stay tuned !
+
+![250EP.gif](https://github.com/CycleGANS/CycleGANS.github.io/blob/master/img/pokemon/250EP.gif?raw=true)
+
 
 
 ### Sources
