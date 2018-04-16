@@ -40,7 +40,7 @@ We haven't included the structure of PatchGAN at this point. We plan to do it af
 
 
 
-<center>_Figure 1: Simplified Discriminator Architecture_</center>
+<center><em>Figure 1: Simplified Discriminator Architecture</em></center>
 
 
 
@@ -48,7 +48,9 @@ We haven't included the structure of PatchGAN at this point. We plan to do it af
 
 The main hyperparameters for the discriminator are, namely, number of output filters, kernel size and stride. A trivial configuration is shown in [Table 1](#table_1). Further tuning is needed when training the model.
 
-<center>_Table 1: Hyperparameters_<a id="table_1"></a></center>
+<a id="table_1"></a>
+
+<center><em>Table 1: Hyperparameters</em></center>
 
 | Layer | Number of output filters | Kernel size | Stride |
 |:-----:|:------------------------:|:-----------:|:------:|
