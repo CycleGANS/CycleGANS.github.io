@@ -9,7 +9,11 @@ category:  project1
 
 # The Discriminator Networks
 
+> **Note:** Please refer to this [post](https://cyclegans.github.io/project1/2018/04/11/Theoretical-Insights-of-GANs/) for the technical knowledge of general GANs if you are not familiar with it.
+
 ## Basic Idea
+
+CycleGAN is introduced in paper [Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks](https://arxiv.org/pdf/1703.10593.pdf).
 
 The CycleGAN paper uses the architecture of $70 \times 70$ PatchGANs introduced in paper [Image-to-Image Translation with Conditional Adversarial Networks](https://arxiv.org/pdf/1611.07004.pdf) for its discriminator networks. The experimental results show that PatchGANs can produce high quality results even with a relatively small patch size
 
@@ -46,7 +50,7 @@ We haven't included the structure of PatchGAN at this point. We plan to do it af
 
 ## Hyperparameters
 
-The main hyperparameters for the discriminator are, namely, number of output filters, kernel size and stride. A trivial configuration is shown in [Table 1](#table_1). Further tuning is needed when training the model.
+The main hyperparameters for the discriminator are, namely, number of output filters, kernel size and stride. A trivial configuration is shown in [_Table 1_](#table_1). Further tuning is needed when training the model.
 
 <a id="table_1"></a>
 
