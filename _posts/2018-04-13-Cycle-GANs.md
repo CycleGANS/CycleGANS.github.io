@@ -39,14 +39,15 @@ Lets dive right into the theory of this paper to understand what exactly happens
 <ul>
     <li><b>$D_X→$</b> aims to distinguish between images <b>$\{x\}$</b> and translated images <b>$F(y)$</b> </li>
     <li><b>$D_Y→$</b> aims to distinguish between images <b>$\{y\}$</b> and translated images <b>$G(x)$</b> </li>
-</ul>
+    </ul>
 
 The <b>Objective</b> of this architecture contains two kinds of losses:
 <ul>
     <li> <b>Adversarial Losses</b> → for matching the distribution of general images to the data distribution in the target domain.</li>
     <li><b>Cycle Consistency Losses</b> → to prevent the learned mappings <b>$G$</b> and <b>$F$</b> from contradicting each other.
-</ul>
+    </ul>
   
+
 ##### Adversarial Losses:
 <ul>
 Adversarial losses need to be applied to both mapping functions.  
@@ -67,6 +68,7 @@ $$L_{GAN}(F,D_X,X,Y)=E_{x \sim p_{data}(x)}[\log(D_X(x))] + E_{y \sim p_{data}(y
 and the <b>Objective</b> is:
 $$Minimize_FMaximize_{D_X}(F,D_X,Y,X)$$
 </ul>
+
 
 ##### Cycle Consistency Loss:
 <ul>
