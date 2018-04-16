@@ -48,7 +48,7 @@ The <b>Objective</b> of this architecture contains two kinds of losses:
     </ul>
   
 
-##### Adversarial Losses:
+<b> Adversarial Losses: </b>
 <ul>
 Adversarial losses need to be applied to both mapping functions.  
 
@@ -70,7 +70,7 @@ $$Minimize_FMaximize_{D_X}(F,D_X,Y,X)$$
 </ul>
 
 
-##### Cycle Consistency Loss:
+<b Cycle Consistency Loss: </b>
 <ul>
 <b>Motivation</b>  
 In theory, adversarial training learns stochastic mapping functions <b>$G$</b> and <b>$F$</b> that produce outputs that are identically distributed as their target domains <b>$Y$</b> and <b>$X$</b>.
@@ -86,7 +86,7 @@ Incentivizing this behavior using <b>Cycle Consistency Loss</b>
 $$L_{Cyc}(G,F) = E_{x \sim p_{data}(x)}[||F(G(x))-x||_1]+E_{y \sim p_{data}(y)}[||G(F(y))-y||_1]$$
 </ul>
 
-#### Full Objective:
+<b> Full Objective: </b>
 $$L(G,F,D_X,D_Y) = L_{GAN}(G,D_Y,X,Y) + L_{GAN}(F,D_X,Y,X) + \lambda L_{Cyc}(G,F)$$
 where $\lambda$ controls relative importance of the two objectives.
 
