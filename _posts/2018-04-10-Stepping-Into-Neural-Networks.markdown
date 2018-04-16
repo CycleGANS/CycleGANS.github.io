@@ -53,8 +53,6 @@ if __name__ ==  "__main__": tf.app.run()
 
 The complete, final code can be  [found here](https://www.github.com/tensorflow/tensorflow/blob/r1.7/tensorflow/examples/tutorials/layers/cnn_mnist.py).
 
-
-
 ## Classifier Architecture 
 
 The high level pipeline for our CNN Classifier is :
