@@ -44,11 +44,11 @@ Lets dive right into the theory of this paper to understand what exactly happens
 The <b>Objective</b> of this architecture contains two kinds of losses:
 <ul>
     <li> <b>Adversarial Losses</b> → for matching the distribution of general images to the data distribution in the target domain.</li>
-    <li><b>Cycle Consistency Losses</b> → to prevent the learned mappings <b>$G$</b> and <b>$F$</b> from contradicting each other.
+    <li><b>Cycle Consistency Losses</b> → to prevent the learned mappings <b>$G$</b> and <b>$F$</b> from contradicting each other.</li>
     </ul>
-  
-
-<b> Adversarial Losses: </b>
+<ul>
+    
+#### Adversarial Losses: </b>
 <ul>
 Adversarial losses need to be applied to both mapping functions.  
 
@@ -70,7 +70,7 @@ $$Minimize_FMaximize_{D_X}(F,D_X,Y,X)$$
 </ul>
 
 
-<b Cycle Consistency Loss: </b>
+<b> Cycle Consistency Loss: </b>
 <ul>
 <b>Motivation</b>  
 In theory, adversarial training learns stochastic mapping functions <b>$G$</b> and <b>$F$</b> that produce outputs that are identically distributed as their target domains <b>$Y$</b> and <b>$X$</b>.
@@ -85,7 +85,7 @@ $$ y → F(y) → G(F(y)) ≈ y$$ called as <b>Backward Cycle Consistency</b>.
 Incentivizing this behavior using <b>Cycle Consistency Loss</b>
 $$L_{Cyc}(G,F) = E_{x \sim p_{data}(x)}[||F(G(x))-x||_1]+E_{y \sim p_{data}(y)}[||G(F(y))-y||_1]$$
 </ul>
-
+</ul>
 <b> Full Objective: </b>
 $$L(G,F,D_X,D_Y) = L_{GAN}(G,D_Y,X,Y) + L_{GAN}(F,D_X,Y,X) + \lambda L_{Cyc}(G,F)$$
 where $\lambda$ controls relative importance of the two objectives.
