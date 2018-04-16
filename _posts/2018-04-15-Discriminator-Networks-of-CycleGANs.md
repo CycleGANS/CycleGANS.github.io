@@ -3,7 +3,7 @@ layout:     notebook
 title:      Discriminator Networks of CycleGANs
 author:     Ziyu Zhou
 tags:       GANS CycleGANs PatchGANs Discriminator DeepNets Vision
-subtitle:   Basic Idea and Implementation of A Simplified Discriminator of CycleGANs
+subtitle:   Build a Simplified Discriminator of CycleGANs
 category:  project1
 ---
 
