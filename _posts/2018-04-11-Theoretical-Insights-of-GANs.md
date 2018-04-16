@@ -40,12 +40,12 @@ i.e., if <b>$D(G(z)) = 1$</b>, then  <b>$\log(1-D( G( z ) ) )=\log(1-1)=-\infty$
 but if <b>$D(G(z)) = 0$</b>, then <b>$\log(1-D( G( z ) ) )=\log(1-0)=0$</b>
 
 In other words, <b>$D$</b> and <b>$G$</b> play the following two player minimax game with value function <b>$V(D,G)$</b>:
-$$Min_GMax_DV(D,G)=E_{x \sim p_{data}(x)}[\log(D(x))]+E_{z \sim p_z(z)}[\log(1-D( G( z ) ) )]$$
+$$Min_G Max_DV(D,G)=E_{x \sim p_{data}(x)}[\log(D(x))]+E_{z \sim p_z(z)}[\log(1-D( G( z ) ) )]$$
 
 In practise, the implementation is carried out in an iterative manner to avoid overfitting and computational prohibition of optimizing <b>$D$</b> to completion in the inner loop of training. Instead, <b>$D$</b> and <b>$G$</b> are optimized alternately with k optimization steps of <b>$D$</b> followed by one optimization step of <b>$G$</b>. This allows <b>$D$</b> to be maintained near its optimal solution as long as <b>$G$</b> chnages slowly.
 
 The algorithm provided in the GANs paper is as follows:
 
-<img src="attachment:image.png" height="0.0005">
+![image.png](https://github.com/CycleGANS/CycleGANS.github.io/blob/master/img/Harshad/image.png?raw=true)
 
-The theory of this paper states that as long as <b>$D$</b> and <b>$G$</b> have enough capacity, <b>$p_g$</b> converges to <b>$p_data$</b>
+The theory of this paper states that as long as <b>$D$</b> and <b>$G$</b> have enough capacity, <b>$p_g$</b> converges to <b>$p_{data}$</b>
