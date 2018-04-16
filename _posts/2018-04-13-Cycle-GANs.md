@@ -84,6 +84,7 @@ $$ y → F(y) → G(F(y)) ≈ y$$ called as <b>Backward Cycle Consistency</b>.
 
 Incentivizing this behavior using <b>Cycle Consistency Loss</b>
 $$L_{Cyc}(G,F) = E_{x \sim p_{data}(x)}[||F(G(x))-x||_1]+E_{y \sim p_{data}(y)}[||G(F(y))-y||_1]$$
+</ul>
 
 #### Full Objective:
 $$L(G,F,D_X,D_Y) = L_{GAN}(G,D_Y,X,Y) + L_{GAN}(F,D_X,Y,X) + \lambda L_{Cyc}(G,F)$$
