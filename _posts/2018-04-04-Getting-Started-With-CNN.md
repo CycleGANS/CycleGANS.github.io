@@ -8,7 +8,7 @@ category:  project1
 ---
 # How do Convolutional Neural Networks Work?
 
-> **Note:** Special thanks to [Brandon Rohrer](http://brohrer.github.io) from Facebook Data Science for sharing his [blog](http://brohrer.github.io/how_convolutional_neural_networks_work.html) with us. 
+> **Note:** Special thanks to [Brandon Rohrer](http://brohrer.github.io) from Facebook Data Science for sharing his [presentation](https://github.com/brohrer/public-hosting/raw/master/How_CNNs_work.pdf) with us. 
 
 Everyone is wondering lately how GANs are able to come up with astonishing images through highly complex neural network. Nine times out of ten, when you hear about deep learning breaking a new technological barrier, Convolutional Neural Networks (CNN) are involved. Now the next obvious question is how do these CNN's work so efficiently? How CNN's have learned to sort images into categories even better than humans in some cases? 
 
