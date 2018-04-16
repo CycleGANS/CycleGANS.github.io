@@ -20,15 +20,18 @@ Lets dive right into the theory of this paper to understand what exactly happens
 
 <b>Goal</b>: Learn mapping functions between 2 domains <b>$X$</b> and <b>$Y$</b>.  
 
-<b>Training Examples</b>: <ul>
-    <li><b>$\{x_i\}_{i=1}^N$</b> where <b>$x_i \in X$</b> </li>
+<b>Training Examples</b>: 
+<ul>
+    <li> <b>$\{x_i\}_{i=1}^N$</b> where <b>$x_i \in X$</b> </li>
     <li> <b>$\{y_i\}_{i=1}^N$</b> where <b>$y_j \in Y$</b> </li>
     </ul>
-<b>Data Distribution</b>: <ul>
+<b>Data Distribution</b>: 
+<ul>
     <li> <b>$x \sim p_{data}(x)$</b> </li>
     <li> <b>$y \sim p_{data}(y)$</b> </li>
     </ul>
-<b>Mappings</b>:<ul>
+<b>Mappings</b>:
+<ul>
     <li> <b>$G: X→Y$</b> </li>
     <li> <b>$F: Y→X$</b> </li>
     </ul>
@@ -37,11 +40,11 @@ Lets dive right into the theory of this paper to understand what exactly happens
     <li><b>$D_Y→$</b> aims to distinguish between images <b>$\{y\}$</b> and translated images <b>$G(x)$</b> </li>
 </ul>
 
-The <b>Objective</b> of this architecture contains two kinds of losses:<ul>
+The <b>Objective</b> of this architecture contains two kinds of losses:
+<ul>
     <li> <b>Adversarial Losses</b> → for matching the distribution of general images to the data distribution in the target domain.</li>
     <li><b>Cycle Consistency Losses</b> → to prevent the learned mappings <b>$G$</b> and <b>$F$</b> from contradicting each other.
         </ul>
-<ul>  
   
 ##### Adversarial Losses:
 <ul>
@@ -77,12 +80,11 @@ And,
 $$ y → F(y) → G(F(y)) ≈ y$$ called as <b>Backward Cycle Consistency</b>.  
 
 Incentivizing this behavior using <b>Cycle Consistency Loss</b>
-$$L_{Cyc}(G,F) = E_{x \sim p_{data}(x)}[||F(G(x))-x||_1]+E_{y \sim p_{data}(y)}[||G(F(y))-y||_1]$$</ul>
+$$L_{Cyc}(G,F) = E_{x \sim p_{data}(x)}[||F(G(x))-x||_1]+E_{y \sim p_{data}(y)}[||G(F(y))-y||_1]$$
 
 #### Full Objective:
 $$L(G,F,D_X,D_Y) = L_{GAN}(G,D_Y,X,Y) + L_{GAN}(F,D_X,Y,X) + \lambda L_{Cyc}(G,F)$$
 where $\lambda$ controls relative importance of the two objectives.
-</ul>
 
 <b>Aim to Solve</b>:
 $$G^*,F^*=arg~min_{G,F}max_{D_X,D_Y}L(G,F,D_X,D_Y)$$
