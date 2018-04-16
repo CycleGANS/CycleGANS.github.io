@@ -81,7 +81,7 @@ $$ x → G(x) → F(G(x)) ≈ x$$ called as <b>Forward Cycle Consistency</b>.
 
 And,
 $$ y → F(y) → G(F(y)) ≈ y$$ called as <b>Backward Cycle Consistency</b>.  
-
+$~$
 Incentivizing this behavior using <b>Cycle Consistency Loss</b>
 $$L_{Cyc}(G,F) = E_{x \sim p_{data}(x)}[||F(G(x))-x||_1]+E_{y \sim p_{data}(y)}[||G(F(y))-y||_1]$$
 </ul>
