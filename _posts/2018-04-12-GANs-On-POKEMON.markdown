@@ -310,7 +310,7 @@ python3 main.py
 
 ### Results
 
-> **Note** : Currently we are running our code on CPU. So we don't have full results (only 250 epochs out of 1000 epochs). The code is still running while you are reading this post. We will update the results soon. Stay tuned !
+> **Note** : Currently we are running our code on CPU. So we don't have full results (only 800 epochs out of 1000 epochs). The code is still running while you are reading this post. We will update the results soon. Stay tuned !
 
 <img src= "{{ "/img/Naman/pokemon/750EP.gif" | prepend: site.baseurl }}">
 
