@@ -23,25 +23,25 @@ This algorithm learns a mapping function  $G: X \mapsto Y$ using an adversarial 
 
 Implement the method proposed in the paper and test it on test and self provided images. Eg. apples to oranges and vice versa, horses to zebras and vice versa, etc.
 
-#####Maximum Goal: 
+##### Maximum Goal: 
 
 Implement this algorithm and propose certain modifications to enhance the outputs and also make it work on videos. Eg. the seasonal change video discussed in the introduction.
 
 
 
-####Reservations: 
+#### Reservations: 
 
 Although, team members have some basic understanding of neural networks, understanding the underlying network graph for unpaired image to image translation could be challenging. Training the entire dataset could be a mammoth task both computationally and schematically, hence implementing a toy example for unpaired image to image translation is the minimum task for this project. 
 
 
 
-####Relationship to your background: 
+#### Relationship to your background: 
 
 All three team members are graduate (Masters’) students in the Department of Industrial Engineering with a concentration in Advanced Analytics. Ziyu and Naman are currently enrolled in the CS446: Machine Learning course which requires them to implement various machine learning algorithms on TensorFlow. The course will also be providing them with an introduction to Generative Adversarial Networks (GANs). Harshad has worked on research projects with his advisor that required him to work with Machine Learning algorithms and implement small Neural Networks on Keras. All three members want to advance their knowledge in Deep Learning and Computer Vision as they desire to pursue their careers as Machine Learning Engineers/Data Scientists. The team does not have prior experience in computer vision and deep learning research. This project will provide them with an excellent opportunity to learn about neural networks and GAN’s. 
 
 
 
-####Resources: 
+#### Resources: 
 
 The standard dataset for unpaired image to image translation is available at [EECS UC Berkeley’s CycleGAN](http://people.eecs.berkeley.edu/~taesung_park/CycleGAN/datasets/) web page. 
 
