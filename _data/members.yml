@@ -15,7 +15,7 @@
   visible: true
 
 - name: Naman Shukla
-  role: Data Manager
+  role: Data Collection and Web Management
   img: https://avatars3.githubusercontent.com/u/32119068?s=400&v=4
   github: namanUIUC
   bio: Hi! I am first year advanced analytics master’s student in the school of Industrial Engineering at University of Illinois at Urbana - Champaign. My responsibilites in this team include data retrieval, tensorflow implementations and website management. I am intersted in statistical learning and Computer Vision.
@@ -23,7 +23,7 @@
   visible: true
 
 - name: Ziyu (Yulia) Zhou
-  role: Computaional Engineer
+  role: Computational Engineer
   img: https://avatars3.githubusercontent.com/u/33557569?s=400&v=4
   github: Ziyu0
   bio: Hi! I am first year Advanced Analytics & Computational Science and Engineering master’s student in the school of Industrial Engineering at University of Illinois at Urbana - Champaign. In this team, I am responsible for theory study, environment configuration, model implementation and assist with website management.
