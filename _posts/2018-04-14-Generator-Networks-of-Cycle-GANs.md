@@ -28,16 +28,15 @@ The Generator used in this implementation involves three parts to it:
 
 <b>In-Network Downsampling</b>  
 <ul>
-    This part of the Generator consists of two **[Convolution Networks](https://cyclegans.github.io/project1/2018/04/04/Getting-Started-With-CNN/)**, each followed by **[Spatial Batch Normalization](https://www.youtube.com/watch?v=vq2nnJ4g6N0&amp;t=76m43s)** and a ReLu activation function.  
+    This part of the Generator consists of two <a href="https://cyclegans.github.io/project1/2018/04/04/Getting-Started-With-CNN/">Convolution Networks</a>, each followed by <a href="https://www.youtube.com/watch?v=vq2nnJ4g6N0&amp;t=76m43s">Spatial Batch Normalization</a> and a ReLu activation function.  
     Each convolution network uses a stride of 2 so that downsampling can occur.  
     The first layer has a kernel size of 9x9 while the second layer has a kernel size of 3x3.
     </ul>
 <b>Residual Blocks</b>
 <ul>
-    The concept of Residual Blocks was introduced by Kaiming He et. al. in their paper titled [Deep Residual Learning for Image Recognition](https://arxiv.org/pdf/1512.03385.pdf).  
-    Each Residual Block consists of two Convolution Layers. The first Convolution Layer is followed by Batch Normalization and ReLu activation. The output is then passed through a second Convolution Layer followed by Batch Normalization. The output obtained from this is then added to the original input.  
+    The concept of Residual Blocks was introduced by Kaiming He et. al. in their paper titled <a href="https://arxiv.org/pdf/1512.03385.pdf">Deep Residual Learning for Image Recognition</a>. Each Residual Block consists of two Convolution Layers. The first Convolution Layer is followed by Batch Normalization and ReLu activation. The output is then passed through a second Convolution Layer followed by Batch Normalization. The output obtained from this is then added to the original input.  
     <img src= "{{ "/img/Harshad/ResidualBlock.png " | prepend: site.baseurl }}" >
-    To understand this in more depth, you can look at this [blog](http://torch.ch/blog/2016/02/04/resnets.html) where the above image was taken from.  
+    To understand this in more depth, you can look at this <a href="http://torch.ch/blog/2016/02/04/resnets.html">blog</a> where the above image was taken from.  
     Each convolution layer in residual blocks has a 3x3 filter.  
     The number of Residual Blocks depens on the size of the input image. For 128x128 images, 6 residual blocks are used and for 256x256 and higher dimensional images, 9 residual blocks are used.
     </ul>
