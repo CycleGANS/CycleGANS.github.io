@@ -9,7 +9,7 @@ header-img: "img/home-bg.jpg"
 
 In this project, the idea is to implement the algorithm developed by `Jun-Yan Zhu`, `Taesung Park`, `Phillip Isola` and `Alexei A. Efros` in their paper “[Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks](https://arxiv.org/abs/1703.10593)”. 
 
-​    <img src= "{{ "/img/utils/paper.jpg " | prepend: site.baseurl }}" style="width: 60%; margin-left: 1%; margin-right: 1%;">
+​    <img src= "{{ "/img/utils/paper.jpg " | prepend: site.baseurl }}" align="middle" style="width: 60%; margin-left: 1%; margin-right: 1%;">
 
 This algorithm learns a mapping function  $G: X \mapsto Y$ using an adversarial loss such that $G(X)$ cannot be distinguished from $Y$, where $X$ and $Y$ are the input and output images respectively. The algorithm also learns an inverse mapping function $F: Y \mapsto X$ using a cycle consistency loss such that $F(G(X))$ is indistinguishable from $X$. However, the major aspect in which this implementation truly shines is that it does not require the $X$ and $Y$ pairs to exist, i.e. image pairs are not needed to train this model. This is highly beneficial as such pairs are not necessarily always available or tend to be expensive monetarily. An application of this could be used in movies, where, if a movie crew was unable to shoot a scene at a particular location during the summer season and it is now winter, the movie crew can now shoot the scene and use this algorithm to generate scenes which look like they were shot during the summer. Other areas in which this algorithm can be applied include image enhancement, image generation from sketches or paintings, object  transfiguration, etc. The algorithm proves to be superior to several prior methods.
 
