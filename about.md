@@ -65,3 +65,5 @@ This data set have following image clusters :
 > ```
 > sh ./download_dataset.sh <name of dataset>
 > ```
+
+The team requires access to BlueWaters for training the network as none of the team members have a GPU or access to any cloud computing platforms. 
