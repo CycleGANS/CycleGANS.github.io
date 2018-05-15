@@ -70,7 +70,7 @@ We also use padding to maintain the information of pixels on the boundary of the
 
 A code snippet for our simplified discriminator is shown below.
 
-> **Note:** Codes are inspired by the cool works of [leehomyc](https://github.com/leehomyc/cyclegan-1) and [hardikbansal](https://github.com/hardikbansal/CycleGAN).
+> **Note:** Codes are inspired from [leehomyc](https://github.com/leehomyc/cyclegan-1) and [hardikbansal](https://github.com/hardikbansal/CycleGAN) amazing implementations.
 
 ```python
 import tensorflow as tf
