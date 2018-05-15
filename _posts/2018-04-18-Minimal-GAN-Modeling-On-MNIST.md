@@ -424,7 +424,7 @@ The final result is given below:
 
 ## Analysis
 
-We can clearly observe the indication of `mode collapse` in our model as the most of the digits are dominated by either 9, 7, 1 or 4. Honestly, this is the best result you could expect from just one hidden layer. This could be because of various reasons like low model complexity, weak discriminator and even because of our loss function. Overall, we have achieved our aim of writing a fairly simple generative network that performs fairly well. 
+We can clearly observe the indication of `mode collapse` in our model as the most of the digits are dominated by either 9, 7, 1 or 4. This could be because of various reasons like low model complexity, weak discriminator and even because of our loss function. Honestly, this is the best result you could expect from just one hidden layer model. Overall, we have achieved our aim of writing a fairly simple generative network that performs fairly well. 
 
 
 
