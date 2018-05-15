@@ -10,7 +10,6 @@ category:  project1
 ## About the MNIST Dataset
 
 The dataset is well known I guess due to great Yann LeCun and all unnecessary information can be found [here](http://yann.lecun.com/exdb/mnist/).  Still if you are wondering about the dataset, here it is :
-
 <img src= "{{ "/img/Naman/GAN_MNIST/MNIST.png" | prepend: site.baseurl }}">
 
 
