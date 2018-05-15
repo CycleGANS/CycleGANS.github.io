@@ -167,6 +167,9 @@ class Gan(object):
 
 save this in a folder `models/gan.py` 
 
+
+### Building Model
+
 Now we have to start filling all the functions that we have created inside the class `Gan`. We will start with constructor of the class. We will pass 2 variables in constructor `ndims` and `nlatent` to initialize our model. We need to build the graph for the model here. For that, we need 2 placeholders as well for the image and the latent variable. Additionally, we need to assign discriminator and generator loss here as well. Then, most importantly, we need to create separate variables for both generator and discriminator network. This will make sure the optimizer work independently on both of the networks. Finally, we have to initialize the tensorflow session here. 
 
 ```python
@@ -220,7 +223,7 @@ Now we have to start filling all the functions that we have created inside the c
 
 
 
-### Building Model
+
 
 #### Generator Network
 
