@@ -3,7 +3,7 @@ layout:     notebook
 title:      Building Cycle GAN Network From Scratch
 author:     Naman Shukla
 tags:       GANS CycleGANs PatchGANs Discriminator Generator DeepNets Vision
-subtitle:   Detailed implementation instructions for building the network components
+subtitle:   Detailed implementation for building the network components
 category:  project1
 ---
 
