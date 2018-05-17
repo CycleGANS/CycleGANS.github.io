@@ -7,6 +7,7 @@ subtitle:   Detailed implementation for building the network components
 category:  project1
 ---
 
+<img src= "{{ "/img/Naman/Code/code.gif" | prepend: site.baseurl }}">
 
 
 ## Generator
