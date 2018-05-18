@@ -21,11 +21,16 @@ Adversarial nets is most straightforward to apply when both models are multilaye
 
 <img src= "{{ "/img/Harshad/GAN/network.png" | prepend: site.baseurl }}">
 
+<center><em>Figure 1: Network Flow Chart (source: `KDnuggets:Al Gharakhanian`)</em></center>
+
 To understand this a little more in depth, let us look at a few notations and understand the functions of each component in the entire network. 
 
-> **$p_g$** : Generator's Distribution over data $x$  
+
+> $z$ : latent space
 >
 > $p_z(z)$ : Prior on input noise variables  
+>
+> $p_g$ : Generator's Distribution over data $x$  
 >
 > $G(z;\theta_g)$ : Mapping to data space where $G$ is a differentiable function represented by a multilayer perceptron with parameters $\theta_g$  
 >
