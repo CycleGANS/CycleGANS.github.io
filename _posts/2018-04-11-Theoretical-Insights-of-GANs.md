@@ -38,7 +38,7 @@ To understand this a little more in depth, let us look at a few notations and un
 >
 > $D(x)$ : Probability that $x$ came from data rather than $p_g$
 
-The task for the Generator network is to approximate a function $G(z;\theta_g)​$ that maps random noise in latent space to a range whose probability distribution $p_g​$ is the same as the probability distribution of the real data $x​$.
+The task for the Generator network is to approximate a function $G(z;\theta_g)$ that maps random noise in latent space to a range whose probability distribution $p_g$ is the same as the probability distribution of the real data $x$.
 While the discriminator is tasked with differentiating images coming out of the Generator and real data.
 
 ### Training
@@ -58,7 +58,7 @@ $G$ would like to maximize this.
 In other words, $D$ and $G$ play the following two player minimax game with value function $V(D,G)$:
 $$\underset{G}{\text{min}} \; \underset{D}{\text{max}} \;V(D,G)=E_{x \sim p_{data}(x)}[\log(D(x))]+E_{z \sim p_z(z)}[\log(1-D( G( z ) ) )]$$
 
-In practice, the implementation is carried out in an iterative manner to avoid overfitting and computational prohibition of optimizing $D$ to completion in the inner loop of training. Instead, $D$ and $G$ are optimized alternately with k optimization steps of $D$ followed by one optimization step of $G$. This allows $D$ to be maintained near its optimal solution as long as $G$ changes slowly.
+In practice, the implementation is carried out in an iterative manner to avoid overfitting and computational prohibition of optimizing $D​$ to completion in the inner loop of training. Instead, $D​$ and $G​$ are optimized alternately with k optimization steps of $D​$ followed by one optimization step of $G​$. This allows $D​$ to be maintained near its optimal solution as long as $G​$ changes slowly.
 
 The algorithm provided in the GANs article is as follows:
 
@@ -66,4 +66,4 @@ The algorithm provided in the GANs article is as follows:
 
 <center><em>Figure 2: GAN Algorithm (source: original article)</em></center>
 
-The theory of this paper states that as long as <b>$D$</b> and <b>$G$</b> have enough capacity, $p_g$ converges to $p_{data}$
+The theory of this paper states that as long as $D$ and $G$ have enough capacity, $p_g$ converges to $p_{data}$
