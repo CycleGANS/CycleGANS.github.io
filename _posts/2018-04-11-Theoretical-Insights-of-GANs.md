@@ -46,6 +46,7 @@ While the discriminator is tasked with differentiating images coming out of the 
 * Simultaneously, $G$ is trained to $\min\log(1-D( G( z ) ) )$
 
 
+
 #### Whats really happening :
 
 $G(z)$ is a fake image.  
@@ -70,3 +71,20 @@ The algorithm provided in the GANs article is as follows:
 <center><em>Figure 2: GAN Algorithm (source: original article)</em></center>
 
 The theory of this paper states that as long as $D$ and $G$ have enough capacity, $p_g$ converges to $p_{data}$
+
+
+
+### Final thoughts
+
+Generative Adversarial Networks are an interesting development, giving us a new way to do unsupervised learning. One big open problem in this area is how best to evaluate these sorts of models. Another thing that we've noticed in our implementation is the [model collapse](http://aiden.nibali.org/blog/2017-01-18-mode-collapse-gans/). This will become crystal clear once you read our next blog post where we introduce `minimalistic GANS implementation on MNIST`  - with just one hidden layer network. Overall, the generative adversarial network is revolutionary concept which is still evolving in many different domains and we will get to know its strengths and weaknesses as we go deeper (no pun intended). 
+
+
+
+### Sources
+
+- [Generative Adversarial Networks](https://arxiv.org/abs/1406.2661)
+- [Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks](https://arxiv.org/abs/1511.06434v2)
+- [InfoGAN: Interpretable Representation Learning by Information Maximizing Generative Adversarial Nets](https://arxiv.org/abs/1606.03657)
+- [Improved Techniques for Training GANs](https://arxiv.org/abs/1606.03498)
+
+Feel free to reuse our [GAN code](https://github.com/CycleGANS/V1.0), and of course keep an eye on our [blog](https://cyclegans.github.io). Comments, corrections and feedback are welcome.
