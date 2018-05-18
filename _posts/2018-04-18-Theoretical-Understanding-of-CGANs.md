@@ -13,12 +13,12 @@ Now that we have an idea of Generative Adversarial Networks, we can dive into th
 Cycle GANs was introduced by Jun-Yan Zhu et. al. in their 2017 paper "Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks" that can be found [here](https://arxiv.org/abs/1703.10593).  
 They also have an amazing [website](https://junyanz.github.io/CycleGAN/) that provides examples of their outputs, news articles and links to the implementation of their algorithm in different programming languages.
 
-The architecture introduced in this paper learns a mapping function <b>$G: X→Y$</b> using an adversarial loss such that <b>$G(X)$</b> cannot be distinguished from <b>$Y$</b>, where <b>$X$</b> and <b>$Y$</b> are the input and output images respectively.   The algorithm also learns an inverse mapping function <b>$F: Y→X$</b> using a cycle consistency loss such that <b>$F(G(X))$</b> is indistinguishable from X. Thus the architecture contains two Generators and two Discriminators. However, the major aspect in which this implementation truly shines is that it does not require the <b>$X$</b> and <b>$Y$</b> pairs to exist, i.e. image pairs are not needed to train this model.  This is highly beneficial as such pairs are not necessarily always available or tend to be expensive monetarily.  
+The architecture introduced in this paper learns a mapping function $G: X→Y$ using an adversarial loss such that $G(X)$ cannot be distinguished from $Y$, where $X$ and $Y$ are the input and output images respectively.   The algorithm also learns an inverse mapping function $F: Y→X$ using a cycle consistency loss such that $F(G(X))$ is indistinguishable from X. Thus the architecture contains two Generators and two Discriminators. However, the major aspect in which this implementation truly shines is that it does not require the $X$ and $Y$ pairs to exist, i.e. image pairs are not needed to train this model.  This is highly beneficial as such pairs are not necessarily always available or tend to be expensive monetarily.  
 An application of this could be used in movies, where, if a movie crew was unable to shoot a scene at a particular location during the summer season and it is now winter, the movie crew can now shoot the scene and use this algorithm to generate scenes which look like they were shot during the summer. Other areas in which this algorithm can be applied include image enhancement, image generation from sketches or paintings, object transfiguration, etc. The algorithm proves to be superior to several prior methods.
 
 Lets dive right into the theory of this paper to understand what exactly happens under the hood.
 
-<b>Goal</b>: Learn mapping functions between 2 domains <b>$X$</b> and <b>$Y$</b>.  
+Goal: Learn mapping functions between 2 domains $X$ and $Y$.  
 
 <b>Training Examples</b>: 
 <ul>

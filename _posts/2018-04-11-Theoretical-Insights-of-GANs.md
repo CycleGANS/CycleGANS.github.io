@@ -19,33 +19,40 @@ Both, the generator and the discriminator, are multilayer perceptrons. An archit
 Both the models are trained using backpropagation and dropout algorithms and samples obtained from the generator only using forward propagation.
 Adversarial nets is most straightforward to apply when both models are multilayer perceptrons.
 
-To understand this a little more in depth, let us look at a few notations and understand what each model is attempting to do in order to acheive the results obtained from GANs
-<b>$p_g$</b> = Generator's Distribution over data <b>$x$</b>  
-<b>$p_z(z)$</b> = Prior on input noise variables  
-<b>$G(z;\theta_g)$</b> = Mapping to data space where <b>$G$</b> is a differentiable function represented by a multilayer perceptron with parameters <b>$\theta_g$</b>  
-<b>$D(x,\theta_d)$</b> = Second multilayer perceptron (Discriminator) that outputs a single scalar  
-<b>$D(x)$</b> = Probability that <b>$x$</b> came from data rather than <b>$p_g$</b>
+<img src= "{{ "/img/Harshad/GAN/network.png" | prepend: site.baseurl }}">
 
-The task for the Generator network is to approximate a function <b>$G(z;\theta_g)$</b> that maps random noise to a range whose probability distribution <b>$p_g$</b> is the same as the probability distribution of the real data <b>$x$</b>.
+To understand this a little more in depth, let us look at a few notations and understand the functions of each component in the entire network. 
+
+> **$p_g$** : Generator's Distribution over data $x$  
+>
+> $p_z(z)$ : Prior on input noise variables  
+>
+> $G(z;\theta_g)$ : Mapping to data space where $G$ is a differentiable function represented by a multilayer perceptron with parameters $\theta_g$  
+>
+> $D(x,\theta_d)$ : Second multilayer perceptron (Discriminator) that outputs a single scalar  
+>
+> $D(x)$ : Probability that $x$ came from data rather than $p_g$
+
+The task for the Generator network is to approximate a function $G(z;\theta_g)$ that maps random noise to a range whose probability distribution $p_g$ is the same as the probability distribution of the real data $x$.
 While the discriminator is tasked with differentiating images coming out of the Generator and real data.
 
 #### Training
-* <b>$D$</b> is trained to maximize the probability of assigning the correct label to both: traning examples and samples from <b>$G$</b>
-* Simultaneously, <b>$G$</b> is trained to <b>$Minimize\log(1-D( G( z ) ) )$</b>
+* $D$ is trained to maximize the probability of assigning the correct label to both: training examples and samples from $G$
+* Simultaneously, $G$ is trained to $\min\log(1-D( G( z ) ) )$
 ##### Understanding this:
-<b>$G(z)$</b> is a fake image.  
-<b>$D(G(z))$</b> is the probability of discriminator classifying this fake image as true data.  
-<b>$G$</b> would like to maximize this.  
-i.e., if <b>$D(G(z)) = 1$</b>, then  <b>$\log(1-D( G( z ) ) )=\log(1-1)=-\infty$</b>  
-but if <b>$D(G(z)) = 0$</b>, then <b>$\log(1-D( G( z ) ) )=\log(1-0)=0$</b>
+$G(z)$ is a fake image.  
+$D(G(z))$ is the probability of discriminator classifying this fake image as true data.  
+$G$ would like to maximize this.  
+i.e., if $D(G(z)) = 1$, then  $\log(1-D( G( z ) ) )=\log(1-1)=-\infty$  
+but if $D(G(z)) = 0$, then $\log(1-D( G( z ) ) )=\log(1-0)=0$
 
-In other words, <b>$D$</b> and <b>$G$</b> play the following two player minimax game with value function <b>$V(D,G)$</b>:
-$$Min_G Max_DV(D,G)=E_{x \sim p_{data}(x)}[\log(D(x))]+E_{z \sim p_z(z)}[\log(1-D( G( z ) ) )]$$
+In other words, $D$ and $G$ play the following two player minimax game with value function $V(D,G)$:
+$$\underset{G}{\text{min}} \; \underset{D}{\text{max}} \;V(D,G)=E_{x \sim p_{data}(x)}[\log(D(x))]+E_{z \sim p_z(z)}[\log(1-D( G( z ) ) )]$$
 
-In practise, the implementation is carried out in an iterative manner to avoid overfitting and computational prohibition of optimizing <b>$D$</b> to completion in the inner loop of training. Instead, <b>$D$</b> and <b>$G$</b> are optimized alternately with k optimization steps of <b>$D$</b> followed by one optimization step of <b>$G$</b>. This allows <b>$D$</b> to be maintained near its optimal solution as long as <b>$G$</b> chnages slowly.
+In practice, the implementation is carried out in an iterative manner to avoid overfitting and computational prohibition of optimizing $D$ to completion in the inner loop of training. Instead, $D$ and $G$ are optimized alternately with k optimization steps of $D$ followed by one optimization step of $G$. This allows $D$ to be maintained near its optimal solution as long as $G$ changes slowly.
 
 The algorithm provided in the GANs paper is as follows:
 
-![image.png](https://github.com/CycleGANS/CycleGANS.github.io/blob/master/img/Harshad/image.png?raw=true)
+<img src= "{{ "/img/Harshad/GAN/algo.png" | prepend: site.baseurl }}">
 
-The theory of this paper states that as long as <b>$D$</b> and <b>$G$</b> have enough capacity, <b>$p_g$</b> converges to <b>$p_{data}$</b>
+The theory of this paper states that as long as <b>$D$</b> and <b>$G$</b> have enough capacity, $p_g$ converges to $p_{data}$
