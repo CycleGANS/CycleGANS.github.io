@@ -44,7 +44,10 @@ While the discriminator is tasked with differentiating images coming out of the 
 ### Training
 * $D$ is trained to maximize the probability of assigning the correct label to both: training examples and samples from $G$
 * Simultaneously, $G$ is trained to $\min\log(1-D( G( z ) ) )$
-#### Understanding Training :
+
+
+#### Whats really happening :
+
 $G(z)$ is a fake image.  
 $D(G(z))$ is the probability of discriminator classifying this fake image as true data.  
 $G$ would like to maximize this.  
@@ -58,7 +61,7 @@ $G$ would like to maximize this.
 In other words, $D$ and $G$ play the following two player minimax game with value function $V(D,G)$:
 $$\underset{G}{\text{min}} \; \underset{D}{\text{max}} \;V(D,G)=E_{x \sim p_{data}(x)}[\log(D(x))]+E_{z \sim p_z(z)}[\log(1-D( G( z ) ) )]$$
 
-In practice, the implementation is carried out in an iterative manner to avoid overfitting and computational prohibition of optimizing $D​$ to completion in the inner loop of training. Instead, $D​$ and $G​$ are optimized alternately with k optimization steps of $D​$ followed by one optimization step of $G​$. This allows $D​$ to be maintained near its optimal solution as long as $G​$ changes slowly.
+In practice, the implementation is carried out in an iterative manner to avoid overfitting and computational prohibition of optimizing $D$ to completion in the inner loop of training. Instead, $D$ and $G$ are optimized alternately with k optimization steps of $D$ followed by one optimization step of $G$. This allows $D$ to be maintained near its optimal solution as long as $G$ changes slowly.
 
 The algorithm provided in the GANs article is as follows:
 
