@@ -9,7 +9,7 @@ category:  project1
 
 ## About the MNIST Dataset
 
-The dataset is well known I guess due to great Yann LeCun and all unnecessary information can be found [here](http://yann.lecun.com/exdb/mnist/).  Still if you are wondering about the dataset, here it is :
+The dataset is well known I guess due to great Yann LeCun and all necessary information can be found [here](http://yann.lecun.com/exdb/mnist/).  Still if you are wondering about the dataset, here it is :
 <img src= "{{ "/img/Naman/GAN_MNIST/MNIST.png" | prepend: site.baseurl }}">
 
 
@@ -17,9 +17,13 @@ The dataset is well known I guess due to great Yann LeCun and all unnecessary in
 
 Our aim should be to implement a simple generative network based on GANs to train on MNIST dataset and then generate the images. 
 
+> **NOTE** : we will be using the concepts covered in the previous blogs. Please don't miss out our blog on [Theoritical Insight of GANs](https://cyclegans.github.io/project1/2018/04/11/Theoretical-Insights-of-GANs/) 
+
 
 
 ## Implementation
+
+Now we will build our first ever `GAN network` from scratch. This blog is step wise guide to implement a generative model.  
 
 ### Skeleton for GAN
 
@@ -412,6 +416,38 @@ def train(model, mnist_dataset, learning_rate=0.001, batch_size=16,
 
 Now, we are done with implementation. The most updated code from the repository can be found here. 
 
+#### Dependencies
+
+> **Note** : The following packages must be installed in your machine if you want to run minimal GAN : 
+>
+> 1. scikit-image
+> 2. tensorflow
+> 3. scipy
+> 4. numpy
+> 5. Pillow
+
+The dependencies can be installed by following the commands :
+
+```
+git clone https://github.com/Zhenye-Na/pokemon-gan.git
+cd pokemon-gan  
+pip install -r requirements.txt
+```
+
+
+
+#### Running the code
+
+> **Note** : Please note that even though running GANs is computationally expensive process, you can run this minimal network on any decent CPU with relatively nice performance.  
+
+You can run our code by following commands:
+
+```
+git clone https://github.com/Zhenye-Na/pokemon-gan.git
+cd pokemon-gan
+python3 main.py
+```
+
 
 
 ## Results
@@ -428,6 +464,17 @@ The final result is given below:
 ## Analysis
 
 We can clearly observe the indication of `mode collapse` in our model as the most of the digits are dominated by either 9, 7, 1 or 4. This could be because of various reasons like low model complexity, weak discriminator and even because of our loss function. Honestly, this is the best result you could expect from just one hidden layer model. Overall, we have achieved our aim of writing a fairly simple generative network that performs fairly well. 
+
+
+
+### Sources
+
+- [Generative Adversarial Networks](https://arxiv.org/abs/1406.2661)
+- [University of Illinois at Urbana Champaing - CS 446](https://github.com/namanUIUC/MachineLearning)
+- [InfoGAN: Interpretable Representation Learning by Information Maximizing Generative Adversarial Nets](https://arxiv.org/abs/1606.03657)
+- [Improved Techniques for Training GANs](https://arxiv.org/abs/1606.03498)
+
+Feel free to reuse our [GAN code](https://github.com/CycleGANS/V1.0), and of course keep an eye on our [blog](https://cyclegans.github.io). Comments, corrections and feedback are welcome.
 
 
 

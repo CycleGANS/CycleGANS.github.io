@@ -76,7 +76,7 @@ The theory of this paper states that as long as $D$ and $G$ have enough capacity
 
 ### Final thoughts
 
-Generative Adversarial Networks are an interesting development, giving us a new way to do unsupervised learning. One big open problem in this area is how best to evaluate these sorts of models. Another thing that we've noticed in our implementation is the [model collapse](http://aiden.nibali.org/blog/2017-01-18-mode-collapse-gans/). This will become crystal clear once you read our next blog post where we introduce `minimalistic GANS implementation on MNIST`  - with just one hidden layer network. Overall, the generative adversarial network is revolutionary concept which is still evolving in many different domains and we will get to know its strengths and weaknesses as we go deeper (no pun intended). 
+Generative Adversarial Networks are an interesting development, giving us a new way to do unsupervised learning. One big open problem in this area is how best to evaluate these sorts of models. Another thing that we've noticed in our implementation is the [mode collapse](http://aiden.nibali.org/blog/2017-01-18-mode-collapse-gans/). This will become crystal clear once you read our next blog post where we introduce [minimalistic GANS implementation on MNIST](https://cyclegans.github.io/project1/2018/04/13/Minimal-GAN-Modeling-On-MNIST/)  - with just one hidden layer network. Overall, the generative adversarial network is revolutionary concept which is still evolving in many different domains and we will get to know its strengths and weaknesses as we go deeper (no pun intended). 
 
 
 

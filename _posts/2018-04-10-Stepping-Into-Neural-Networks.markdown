@@ -176,6 +176,8 @@ One of the eye catching implementation is done by [Jon Bruner](https://github.co
 
 In this implementation, they have managed to produce MNIST dataset itself from the Gaussian Noise using DCGANS. 
 
+Feel free to reuse our [CNN code](https://github.com/CycleGANS/V1.0), and of course keep an eye on our [blog](https://cyclegans.github.io). Comments, corrections and feedback are welcome.
+
 ### Sources
 
 - [TensorFlow Tutorial](https://www.tensorflow.org/tutorials/layers) 

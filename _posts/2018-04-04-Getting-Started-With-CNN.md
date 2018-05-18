@@ -123,6 +123,9 @@ With so many combinations and permutations, only a small fraction of the possibl
 
 ## Sources
 
-1. Brandon's Blog - http://brohrer.github.io
-2. Convolution - http://mathworld.wolfram.com/Convolution.html
-3. Stanford University (CS231 notes) - http://cs231n.github.io/convolutional-networks/
+1. [Brandon's Blog](http://brohrer.github.io)
+2. [Convolution](http://mathworld.wolfram.com/Convolution.html)
+3. [University of Illinois at Urbana Champaign - CS 446](https://github.com/namanUIUC/MachineLearning)
+4. [Stanford University (CS231 notes)](http://cs231n.github.io/convolutional-networks/)
+
+Feel free to reach out to us, and of course keep an eye on our [blog](https://cyclegans.github.io/). Comments, corrections and feedback are welcome.

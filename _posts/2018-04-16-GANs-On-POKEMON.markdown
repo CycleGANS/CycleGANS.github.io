@@ -13,7 +13,9 @@ category:  project1
 
 
 
-Generating Pokemon from `GANs` seems really interesting! So decided to implement this for fun. The neural network architecture that we have used for training Pokemon is [Deep Convolutional GAN](https://arxiv.org/abs/1511.06434) (aka `DCGAN`) 
+Till now we have established a good enough understanding of how GANs work. If you haven't check out our blogs on [Convolution Neural Nets](https://cyclegans.github.io/project1/2018/04/04/Getting-Started-With-CNN/), T[heory behind Generative Adversarial Networks (GANs)](https://cyclegans.github.io/project1/2018/04/11/Theoretical-Insights-of-GANs/) and [GANs minimal implementation](https://cyclegans.github.io/project1/2018/04/13/Minimal-GAN-Modeling-On-MNIST/), please do so as this blog assumes that the reader knows the nitty-gritty details behind the concept described below. To shift the gear a bit! we will now test GAN on little complex dataset - Pokemon Dataset. 
+
+Generating Pokemon from `GANs` seems really interesting!  The neural network architecture that we have used for training Pokemon is [Deep Convolutional GAN](https://arxiv.org/abs/1511.06434) (aka `DCGAN`) 
 
 
 
