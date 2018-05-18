@@ -420,17 +420,16 @@ Now, we are done with implementation. The most updated code from the repository 
 
 > **Note** : The following packages must be installed in your machine if you want to run minimal GAN : 
 >
-> 1. scikit-image
+> 1. matplotlib
 > 2. tensorflow
-> 3. scipy
+> 3. six
 > 4. numpy
-> 5. Pillow
 
 The dependencies can be installed by following the commands :
 
 ```
-git clone https://github.com/Zhenye-Na/pokemon-gan.git
-cd pokemon-gan  
+git clone https://github.com/CycleGANS/V1.0.git
+cd minimal_MNIST_GAN
 pip install -r requirements.txt
 ```
 
@@ -443,9 +442,9 @@ pip install -r requirements.txt
 You can run our code by following commands:
 
 ```
-git clone https://github.com/Zhenye-Na/pokemon-gan.git
-cd pokemon-gan
-python3 main.py
+git clone https://github.com/CycleGANS/V1.0.git
+cd minimal_MNIST_GAN
+python3 main_tf.py
 ```
 
 

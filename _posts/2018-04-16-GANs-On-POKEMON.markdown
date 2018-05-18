@@ -289,8 +289,8 @@ The entire for training the pokemons are linked in our repository. This reposito
 The dependencies can be installed by following the commands :
 
 ```
-git clone https://github.com/Zhenye-Na/pokemon-gan.git
-cd pokemon-gan  
+git clone https://github.com/CycleGANS/V1.0.git
+cd Pokemon_GAN 
 pip install -r requirements.txt
 ```
 
@@ -303,8 +303,8 @@ pip install -r requirements.txt
 You can run our code by following commands:
 
 ```
-git clone https://github.com/Zhenye-Na/pokemon-gan.git
-cd pokemon-gan
+git clone https://github.com/CycleGANS/V1.0.git
+cd Pokemon_GAN 
 python3 main.py
 ```
 
