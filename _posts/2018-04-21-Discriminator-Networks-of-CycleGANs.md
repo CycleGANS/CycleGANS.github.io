@@ -9,11 +9,11 @@ category:  project1
 
 # The Discriminator Networks
 
-> **Note:** Please refer to this [post](https://cyclegans.github.io/project1/2018/04/11/Theoretical-Insights-of-GANs/) for the technical knowledge of general GANs if you are not familiar with it.
-
 ## Basic Idea
 
 CycleGAN is introduced in paper [Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks](https://arxiv.org/pdf/1703.10593.pdf).
+
+> **Note:** Please refer to this [post](https://cyclegans.github.io/project1/2018/04/11/Theoretical-Insights-of-GANs/) for the technical understanding of GANs in general if you are not familiar with it. Also, don't forget to check out our previous blogs. 
 
 The CycleGAN paper uses the architecture of $70 \times 70$ PatchGANs introduced in paper [Image-to-Image Translation with Conditional Adversarial Networks](https://arxiv.org/pdf/1611.07004.pdf) for its discriminator networks. The experimental results show that PatchGANs can produce high quality results even with a relatively small patch size
 
@@ -48,7 +48,7 @@ We haven't included the structure of PatchGAN at this point. We plan to do it af
 
 
 
-## Hyperparameters
+### Hyperparameters
 
 The main hyperparameters for the discriminator are, namely, number of output filters, kernel size and stride. A trivial configuration is shown in [_Table 1_](#table_1). Further tuning is needed when training the model.
 
@@ -66,7 +66,26 @@ The main hyperparameters for the discriminator are, namely, number of output fil
 
 We also use padding to maintain the information of pixels on the boundary of the image.
 
-## Code Snippet
+### Network Layout
+
+Following is the description of the overall `discriminator network` layer by layer configuration. This is the exact model that we have implemented in our generator code. 
+
+| Layer Number |  Layer Type | Kernel Size | Stride | Dimension I/O | Channels I/O |
+|:------------:|:-----------:|:-----------:|:------:|:-------------:|:------------:|
+|       1      |    Conv2d   |      4      |    2   |    256—128    |     3—64     |
+|       2      |    LReLU    |      -      |    -   |    256—128    |     3—64     |
+|       3      |    Conv2d   |      4      |    2   |     128—64    |    64—128    |
+|       4      | BatchNorm2d |      -      |    -   |     128—64    |    64—128    |
+|       5      |    LReLU    |      -      |    -   |     128—64    |    64—128    |
+|       6      |    Conv2d   |      4      |    2   |     64—32     |    128—256   |
+|       7      | BatchNorm2d |      -      |    -   |     64—32     |    128—256   |
+|       8      |    LReLU    |      -      |    -   |     64—32     |    128—256   |
+|       9      |    Conv2d   |      4      |    1   |     32—31     |    256—512   |
+|      10      | BatchNorm2d |      -      |    -   |     32—31     |    256—512   |
+|      11      |    LReLU    |      -      |    -   |     32—31     |    256—512   |
+|      12      |    Conv2d   |      4      |    1   |     31—30     |     512—1    |
+
+### Code Snippet
 
 A code snippet for our simplified discriminator is shown below.
 
@@ -150,6 +169,12 @@ def _leaky_relu(x, relu_alpha, name="leaky_relu"):
     with tf.variable_scope(name):
         return tf.maximum(x, relu_alpha * x)
 ```
+
+With this we are done with the proper implementation of the discriminator network. 
+
+Feel free to reuse our [Discriminator code](https://github.com/CycleGANS/V1.0), and of course keep an eye on our [blog](https://cyclegans.github.io). Comments, corrections and feedback are welcome.
+
+
 
 ## Sources
 
