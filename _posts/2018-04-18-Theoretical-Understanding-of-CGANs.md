@@ -114,7 +114,7 @@ We have discussed the overall flow of the network with some theoretical concept 
 
 
 
-#### Sources
+### Sources
 
 - [Generative Adversarial Networks](https://arxiv.org/abs/1406.2661)
 - [Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks](https://arxiv.org/abs/1703.10593)
