@@ -11,6 +11,10 @@ category:  project1
 ## Introduction to Cycle GANs
 Now that we have an idea of Generative Adversarial Networks, we can dive into the heart of this project, i.e. <b>Cycle GANs</b>.  
 
+> **NOTE**: As always, we will be building up the concept of cycle GAN on the previous blogs. Please visit them in order to understand the underlying principles and additional concepts needed to understand this blog. 
+
+
+
 Cycle GANs was introduced by Jun-Yan Zhu et. al. in their 2017 paper "[Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks](https://arxiv.org/abs/1703.10593)" 
 They also have an amazing [website](https://junyanz.github.io/CycleGAN/) that provides examples of their outputs, news articles and links to the implementation of their algorithm in different programming languages.
 
@@ -86,6 +90,7 @@ However, with large enough capacity, these functions can map the same set of ima
 Thus, forward cycle consistency and backward cycle consistency are needed as given below respectively,
 
 $$ x \mapsto G(x) \mapsto F(G(x)) \approx x$$
+
 $$ y \mapsto F(y) \mapsto G(F(y)) \approx y$$
 
 
@@ -100,3 +105,17 @@ This will result in full objective loss as given below, which we aim to solve by
 $$L(G,F,D_X,D_Y) = L_{GAN}(G,D_Y,X,Y) + L_{GAN}(F,D_X,Y,X) + \lambda L_{Cyc}(G,F)$$
 
 where $\lambda$ controls relative importance of the two objectives.
+
+
+
+### Final thoughts
+
+We have discussed the overall flow of the network with some theoretical concept behind the model formulation. The punch line is that there are two generative adversarial networks binded with a cyclic loss function. The over-all objective function of the network contain both cyclic loss as well as adversarial losses from each GAN. The idea would become more apparent when we start implementing our own Cycle GAN network for image-to-image translation. 
+
+
+
+#### Sources
+
+- [Generative Adversarial Networks](https://arxiv.org/abs/1406.2661)
+- [Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks](https://arxiv.org/abs/1703.10593)
+- [Cycle GAN for image2image translation repository](https://junyanz.github.io/CycleGAN/)
