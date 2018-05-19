@@ -39,7 +39,7 @@ The concept of Residual Blocks was introduced by Kaiming He et. al. in their pap
 
 <center><img src= "{{ "/img/Harshad/ResidualBlock.png " | prepend: site.baseurl }}" style="width: 60%; margin-left: 1%; margin-right: 1%;" ></center>
 
-​    To understand this in more depth, you can look at this <a href="http://torch.ch/blog/2016/02/04/resnets.html">blog</a> where the above image was taken from. Each convolution layer in residual blocks has a `3x3 filter`. The number of Residual Blocks depens on the size of the input image. For `128x128 images`, `6 residual blocks` are used and for `256x256 and higher` dimensional images, `9 residual blocks` are used.
+To understand this in more depth, you can look at this <a href="http://torch.ch/blog/2016/02/04/resnets.html">blog</a> where the above image was taken from. Each convolution layer in residual blocks has a `3x3 filter`. The number of Residual Blocks depens on the size of the input image. For `128x128 images`, `6 residual blocks` are used and for `256x256 and higher` dimensional images, `9 residual blocks` are used.
 
 #### In-network Upsampling
 
