@@ -50,7 +50,7 @@ The entire Feedforward Generator Network starts off with Downsampling, followed 
 
 
 
-<img src= "{{ "/img/Harshad/Generator.png " | prepend: site.baseurl }}" style="width: x%; margin-left: y%; margin-right: z%;">
+<center><img src= "{{ "/img/Harshad/Generator.png" | prepend: site.baseurl }}" style="width: 40%; margin-left: 1%; margin-right: 1%;"></center>
 
 The benefits of using such a network is that it is computationally less expensive compared to the naive implementation and provides large effective receptive fields that lead to high quality style transfers in the output images.
 
