@@ -10,7 +10,7 @@ category:  project1
 
 ## Generator Network
 
-Now that we have understood the theory behind Cycle GANs, it is time for us to look at the implementation. In this article, we will have a look at the Generator architecture used in the CycleGANs [paper](https://arxiv.org/pdf/1703.10593.pdf).
+Now that we have understood the theory behind Cycle GANs, it is time for us to look at the implementation. In this article, we will have a look at the Generator architecture used in the cycle consistent image to image translation [article](https://arxiv.org/pdf/1703.10593.pdf).
 
 > **NOTE** : Please refer to our previous blogs to get a theoretical understanding behind cycle consistent networks.  
 
