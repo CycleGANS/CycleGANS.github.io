@@ -21,21 +21,17 @@ They state that their architecture does not rely only on pixel losses but also o
 However, we shall not get into the perceptual losses and their benefits in this article as that is not our major goal. Our motive to understand their architecture is limited to their Generator architecture which generates the amazing outputs and also does this at a really fast pace.
 
 The Generator used in this implementation involves three parts to it:
-<ul>
-    <li> <b>In-network Downsampling</b> </li>
-    <li> <b>Several Residual Blocks</b> </li>
-    <li> <b>In-network Upsampling</b> </li>
-</ul>
+`In-network Downsampling`, `Several Residual Blocks` and `In-network Upsampling`
     
 
 #### In-Network Downsampling
 
-This part of the Generator consists of two <a href="https://cyclegans.github.io/project1/2018/04/04/Getting-Started-With-CNN/">Convolution Networks</a>, each followed by <a href="https://www.youtube.com/watch?v=vq2nnJ4g6N0&amp;t=76m43s">Spatial Batch Normalization</a> and a ReLu activation function. Each convolution network uses a stride of 2 so that downsampling can occur. The first layer has a kernel size of 9x9 while the second layer has a kernel size of 3x3.
+This part of the Generator consists of two <a href="https://cyclegans.github.io/project1/2018/04/04/Getting-Started-With-CNN/">Convolution Networks</a>, each followed by <a href="https://www.youtube.com/watch?v=vq2nnJ4g6N0&amp;t=76m43s">Spatial Batch Normalization</a> and a `ReLu` activation function. Each convolution network uses a `stride of 2` so that downsampling can occur. The first layer has a `kernel size of 9x9` while the second layer has a `kernel size of 3x3`.
 
 
 #### Residual Blocks
 
-The concept of Residual Blocks was introduced by Kaiming He et. al. in their paper titled <a href="https://arxiv.org/pdf/1512.03385.pdf">Deep Residual Learning for Image Recognition</a>. Each Residual Block consists of two Convolution Layers. The first Convolution Layer is followed by Batch Normalization and ReLu activation. The output is then passed through a second Convolution Layer followed by Batch Normalization. The output obtained from this is then added to the original input.
+The concept of Residual Blocks was introduced by Kaiming He et. al. in their paper titled <a href="https://arxiv.org/pdf/1512.03385.pdf">Deep Residual Learning for Image Recognition</a>. Each Residual Block consists of two Convolution Layers. The first Convolution Layer is followed by [Batch Normalization]() and `ReLu` activation. The output is then passed through a second Convolution Layer followed by `Batch Normalization`. The output obtained from this is then added to the original input.
 
 <center><img src= "{{ "/img/Harshad/ResidualBlock.png" | prepend: site.baseurl }}" style="width: 25%; margin-left: 1%; margin-right: 1%;"></center>
 
@@ -55,5 +51,38 @@ The entire Feedforward Generator Network starts off with Downsampling, followed 
 The benefits of using such a network is that it is computationally less expensive compared to the naive implementation and provides large effective receptive fields that lead to high quality style transfers in the output images.
 
 
-#### Implementation:
+### Implementation:
 Our implementation of the Generator can be found [here](https://github.com/CycleGANS/CS543CycleGANsProject/blob/master/Generator.py)
+
+#### Hyperparameters
+
+| Layer Number |    Layer    | Kernel | Stride | Dimension I/O | Channels I/O |
+|:------------:|:-----------:|:------:|:------:|:-------------:|:------------:|
+|       1      |    Conv2d   |    7   |    1   |    256—256    |     3—64     |
+|       2      | BatchNorm2d |    -   |    -   |    256—256    |     64—64    |
+|       3      |     ReLU    |    -   |    -   |    256—256    |     64—64    |
+|       4      |    Conv2d   |    3   |    2   |    256—128    |    64—128    |
+|       5      | BatchNorm2d |    -   |    -   |    128—128    |    128—128   |
+|       6      |     ReLU    |    -   |    -   |    128—128    |    128—128   |
+|       7      |    Conv2d   |    3   |    2   |     128—64    |    128—256   |
+|       8      | BatchNorm2d |    -   |    -   |     64—64     |    256—256   |
+|       9      |     ReLU    |    -   |    -   |     64—64     |    256—256   |
+|      10      |    Conv2d   |    3   |    1   |     64—64     |    256—256   |
+|      11      | BatchNorm2d |    -   |    -   |     64—64     |    256—256   |
+|      12      |     ReLU    |    -   |    -   |     64—64     |    256—256   |
+|      13      |   Convd2d   |    3   |    1   |     64—64     |    256—256   |
+|      14      | BatchNorm2d |    -   |    -   |     64—64     |    256—256   |
+|      15      |     9+14    |    -   |    -   |     64—64     |    256—256   |
+|      16      |    Conv2d   |    3   |   1/2  |     64—128    |    256—128   |
+|      17      | BatchNorm2d |    -   |    -   |    128—128    |    128—128   |
+|      18      |     ReLU    |    -   |    -   |    128—128    |    128—128   |
+|      19      |    Conv2d   |    3   |   1/2  |    128—256    |    128—64    |
+|      20      | BatchNorm2d |    -   |    -   |    256—256    |     64—64    |
+|      21      |     ReLU    |    -   |    -   |    256—256    |     64—64    |
+|      22      |    Conv2d   |    7   |    1   |    256—256    |     64—3     |
+|      23      |     TanH    |    -   |    -   |    256—256    |      3—3     |
+
+#### Code Snippet
+
+A code snippet for our simplified discriminator is shown below.
+
