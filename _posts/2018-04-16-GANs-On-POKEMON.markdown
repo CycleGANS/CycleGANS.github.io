@@ -274,7 +274,7 @@ All images will be reshaped to 64x64 pixels with white background. If an image i
 
 ### Implementation
 
-The entire for training the pokemons are linked in our repository. This repository is inspired from  [Newmu](https://github.com/Newmu/dcgan_code), [kvpratama](https://github.com/kvpratama/gan/tree/master/pokemon), [moxiegushi](https://github.com/moxiegushi/pokeGAN) along with our own implementation.
+The entire code for training the pokemon network is linked in our [repository](https://github.com/CycleGANS/V1.0/tree/master/Pokemon_GAN). This repository is inspired from  [Newmu](https://github.com/Newmu/dcgan_code), [kvpratama](https://github.com/kvpratama/gan/tree/master/pokemon), [moxiegushi](https://github.com/moxiegushi/pokeGAN) along with our own implementation.
 
 #### Dependencies 
 
