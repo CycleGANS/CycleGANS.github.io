@@ -73,7 +73,7 @@ def batch(sess, dataset):
 
 This is the most crucial part of the entire implementation. The entire code is available in our [repository](https://github.com/CycleGANS/V1.0/blob/master/CycleGAN/train.py).  We will be following the following algorithm to create the training method. 
 
-> We will be following the same network flow diagram presented in the theoretical blog. Its a good idea to keep this flow chart in the mind :)
+> We will be following the same network flow diagram presented in our [theoretical blog](https://cyclegans.github.io/project1/2018/04/18/Theoretical-Understanding-of-CGANs/). Its a good idea to keep this flow chart in the mind :)
 
 <center><img src= "{{ "/img/Naman/Code/Algo.png" | prepend: site.baseurl }}" style="width: 60%; margin-left: 1%; margin-right: 1%;"></center>
 
