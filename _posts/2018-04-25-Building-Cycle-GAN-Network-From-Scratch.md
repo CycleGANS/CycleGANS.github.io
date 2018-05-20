@@ -75,7 +75,7 @@ This is the most crucial part of the entire implementation. The entire code is a
 
 > We will be following the same network flow diagram presented in the theoretical blog. Its a good idea to keep this flow chart in the mind :)
 
-<img src= "{{ "/img/Naman/Code/Algo.png" | prepend: site.baseurl }}">
+<center><img src= "{{ "/img/Naman/Code/Algo.png" | prepend: site.baseurl }}" style="width: 40%; margin-left: 1%; margin-right: 1%;"></center>
 
 First we will create a place holder for the the images. 
 
