@@ -14,7 +14,7 @@ category:  project1
 
 Up till now, we have successfully built our `Generator` and `Discriminator` network. Now it time to integrate this into a single model for cycle consistent network or `Cycle GAN`.  To achieve that, here's the game plan : First finish the data handling which involves all preprocessing of the data. Then, we have to implement the training and test for the network. Finally, integrate into one single module.  
 
-> **NOTE**: This blog is going to be pretty heavy implementation oriented post to be honest! we recommend to make yourself familiar with the previous posts on cycle GANs first if necessary. 
+> **NOTE**: This blog is going to be pretty heavy implementation oriented to be honest! we recommend to make yourself familiar with the previous posts on cycle GANs first if necessary. 
 
 ## Data Handling 
 
