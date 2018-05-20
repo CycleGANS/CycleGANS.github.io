@@ -12,7 +12,7 @@ category:  project1
 
 ## Quick Recap !
 
-Up till now, we have successfully build our `Generator` and `Discriminator` network. Now it time to integrate this into a single model for cycle consistent network or `Cycle GAN`.  To achieve that, here's the game plan : First finish the data handling which involves all preprocessing of the data. Then, we have to implement the training and test for the network. Finally, integrate into one single module.  
+Up till now, we have successfully built our `Generator` and `Discriminator` network. Now it time to integrate this into a single model for cycle consistent network or `Cycle GAN`.  To achieve that, here's the game plan : First finish the data handling which involves all preprocessing of the data. Then, we have to implement the training and test for the network. Finally, integrate into one single module.  
 
 > **NOTE**: This blog is going to be pretty heavy implementation oriented post to be honest! we recommend to make yourself familiar with the previous posts on cycle GANs first if necessary. 
 
@@ -74,6 +74,8 @@ def batch(sess, dataset):
 This is the most crucial part of the entire implementation. The entire code is available in our [repository](https://github.com/CycleGANS/V1.0/blob/master/CycleGAN/train.py).  We will be following the following algorithm to create the training method. 
 
 > We will be following the same network flow diagram presented in the theoretical blog. Its a good idea to keep this flow chart in the mind :)
+
+<img src= "{{ "/img/Naman/Code/Algo.png" | prepend: site.baseurl }}">
 
 First we will create a place holder for the the images. 
 
@@ -331,3 +333,35 @@ def _test_procedure(batch, sess, gen_real, gen_cyc, real_placeholder, save_dir, 
         print("Save image.")
 ```
 
+
+
+## The Last Step
+
+This is the final step that we've been waiting for so long ! Here's the snippet from the main function : 
+
+```python
+import tensorflow as tf
+import train
+from test import test
+
+if __name__ == '__main__':
+    train.training(dataset='monet2photo', epochs=75, image_shape=256, batch_size=1, G_cyc_loss_lambda=10.0, F_cyc_loss_lambda=10.0, learning_rate=0.0002)
+    print("Training completed!")
+    test(dataset_str='monet2photo', img_width=256, img_height=256)
+    print("Testing completed! Enjoy your life!!!")
+```
+
+
+
+The detailed analysis is done in the post on blaa. Feel free to reuse our [code](https://github.com/CycleGANS/V1.0), and of course keep an eye on our [blog](https://cyclegans.github.io). Comments, corrections and feedback are welcome.
+
+
+
+### Sources
+
+1. [Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks](https://arxiv.org/abs/1703.10593)
+2. [Image-to-Image Translation with Conditional Adversarial Networks](https://arxiv.org/pdf/1611.07004.pdf)
+3. [Training and investigating Residual Nets](http://torch.ch/blog/2016/02/04/resnets.html)
+4. [Perceptual Losses for Real-Time Style Transfer and Super-Resolution](https://arxiv.org/abs/1603.08155)
+5. [Repository - LynnHo](https://github.com/LynnHo/CycleGAN-Tensorflow-PyTorch)
+6. [Understanding and Implementing CycleGAN in TensorFlow](https://hardikbansal.github.io/CycleGANBlog/) 
