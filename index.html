@@ -15,6 +15,8 @@ layout: page
     <p class="post-meta" style="margin-bottom:5px">Posted by {{ post.author }} on {{ post.date | date: "%B %-d, %Y" }}</p>
 	<div class="notepad-index-post-tags" style="">
 		{% for tag in post.tags %}<a href="{{ site.baseurl }}/search/index.html#{{ tag | cgi_encode }}" title="Other posts from the {{ tag | capitalize }} tag">{{ tag | capitalize }}</a>{% unless forloop.last %}&nbsp;{% endunless %}{% endfor %}
+	<div class=github-int> <a data-style=mega href=https://github.com/Mayccoll/Gogh class=github-button>View on Github</a> <a aria-label="Star Mayccoll/Gogh on GitHub" data-count-aria-label="# stargazers on GitHub" data-count-api=/repos/Mayccoll/Gogh#stargazers_count data-count-href=/Mayccoll/Gogh/stargazers
+                data-style=mega data-icon=octicon-star href=https://github.com/Mayccoll/Gogh/stargazers class=github-button>Star</a> </div>
 	</div>
 </div>
 <hr>
