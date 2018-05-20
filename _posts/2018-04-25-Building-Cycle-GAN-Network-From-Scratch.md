@@ -133,12 +133,13 @@ Now, its time to optimize the variables from each of the networks.
 # Optimization
 # Getting all the variables that belong to the different networks
 # I.e. The weights and biases in G, F, DX and DY
-network_variables = tf.trainable_variables()  # This gets all the variables that will be initialized
+# This gets all the variables that will be initialized
+network_variables = tf.trainable_variables()  
 GF_variables = [variables for variables in network_variables if 'G' in variables.name or 'F' in variables.name]
 DX_variables = [variables for variables in network_variables if 'DX' in variables.name]
 DY_variables = [variables for variables in network_variables if 'DY' in variables.name]
 
-optimizer = tf.train.AdamOptimizer(learning_rate, beta1=0.5)  # Put the learning rate here
+optimizer = tf.train.AdamOptimizer(learning_rate, beta1=0.5) 
 GF_train_step = optimizer.minimize(GF_tot_loss, var_list=GF_variables)
 DX_train_step = optimizer.minimize(DX_tot_loss, var_list=DX_variables)
 DY_train_step = optimizer.minimize(DY_tot_loss, var_list=DY_variables)
@@ -221,7 +222,7 @@ sess.close()
 
 ```
 
-> **Additional Helper Function**: his function makes sure that the range of the images generated is between 0 and 255. This function is taken [LynnHo's repository](https://github.com/LynnHo/CycleGAN-Tensorflow-PyTorch/blob/master/image_utils.py). 
+> **Additional Helper Function**: This function makes sure that the range of the images generated is between 0 and 255. This function is taken [LynnHo's repository](https://github.com/LynnHo/CycleGAN-Tensorflow-PyTorch/blob/master/image_utils.py). 
 >
 > ```pytho
 > def _to_range(images, min_value=0.0, max_value=1.0, dtype=None):
