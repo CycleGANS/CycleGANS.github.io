@@ -353,7 +353,7 @@ if __name__ == '__main__':
 
 
 
-The detailed analysis is done in the post on blaa. Feel free to reuse our [code](https://github.com/CycleGANS/V1.0), and of course keep an eye on our [blog](https://cyclegans.github.io). Comments, corrections and feedback are welcome.
+The detailed analysis is done in the post on blaa. Feel free to reuse our [code](https://github.com/CycleGANS/CS543CycleGANsProject), and of course keep an eye on our [blog](https://cyclegans.github.io). Comments, corrections and feedback are welcome.
 
 
 
