@@ -23,7 +23,7 @@ It's time to test our implementation on slandered datasets and analyze the perfo
 
 ## Implementation
 
-If you want to implement our code off the shelf, you can find the entire code for `Cycle GAN` network in our [repository](https://github.com/CycleGANS/V1.0/tree/master/CycleGAN). To download specific datasets, please refer to the `Resources` section of the [About Page](https://cyclegans.github.io/about/). 
+If you want to implement our code off the shelf, you can find the entire code for `Cycle GAN` network in our [repository](https://github.com/CycleGANS/CS543CycleGANsProject). To download specific datasets, please refer to the `Resources` section of the [About Page](https://cyclegans.github.io/about/). 
 
 #### Dependencies
 
