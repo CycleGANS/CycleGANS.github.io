@@ -172,7 +172,7 @@ def _leaky_relu(x, relu_alpha, name="leaky_relu"):
 
 With this we are done with the proper implementation of the discriminator network. 
 
-Feel free to reuse our [Discriminator code](https://github.com/CycleGANS/V1.0), and of course keep an eye on our [blog](https://cyclegans.github.io). Comments, corrections and feedback are welcome.
+Feel free to reuse our [Discriminator code](https://github.com/CycleGANS/CS543CycleGANsProject/blob/master/simple_discriminator.py), and of course keep an eye on our [blog](https://cyclegans.github.io). Comments, corrections and feedback are welcome.
 
 
 
