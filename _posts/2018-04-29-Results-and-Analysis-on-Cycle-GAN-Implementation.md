@@ -95,8 +95,8 @@ We have tested our network implementation in 5 different datasets : `horse2zebra
 
 <img src= "{{ "/img/Naman/Results/monet2photo_good.png" | prepend: site.baseurl }}">
 
-<center><em>Figure 1: Horse to Zebra translation</em></center>
+<center><em>Figure 5: Monet to Photo translation</em></center>
 
 <img src= "{{ "/img/Naman/Results/photo2monet_good.png" | prepend: site.baseurl }}">
 
-<center><em>Figure 2: Zebra to Horse translation</em></center>
+<center><em>Figure 6: Photo to Monet translation</em></center>
