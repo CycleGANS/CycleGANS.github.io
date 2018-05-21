@@ -77,3 +77,26 @@ We have tested our network implementation in 5 different datasets : `horse2zebra
 
 <center><em>Figure 2: Zebra to Horse translation</em></center>
 
+
+
+#### Summer - Winter
+
+<img src= "{{ "/img/Naman/Results/summer2winter_good.png" | prepend: site.baseurl }}">
+
+<center><em>Figure 3: Summer to Winter translation</em></center>
+
+<img src= "{{ "/img/Naman/Results/winter2summer_good.png" | prepend: site.baseurl }}">
+
+<center><em>Figure 4: Winter to Summer translation</em></center>
+
+
+
+#### Monet - Photo
+
+<img src= "{{ "/img/Naman/Results/monet2photo_good.png" | prepend: site.baseurl }}">
+
+<center><em>Figure 1: Horse to Zebra translation</em></center>
+
+<img src= "{{ "/img/Naman/Results/photo2monet_good.png" | prepend: site.baseurl }}">
+
+<center><em>Figure 2: Zebra to Horse translation</em></center>
