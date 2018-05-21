@@ -86,6 +86,7 @@ Following is the description of the overall `generator network` layer by layer c
 |      22      |    Conv2d   |    7   |    1   |    256—256    |     64—3     |
 |      23      |     TanH    |    -   |    -   |    256—256    |      3—3     |
 
+Repeat steps 10 to 15 nine times to have 9 residual blocks
 #### Code Snippet
 
 A code snippet for our simplified discriminator is shown below. The generator function have 4 high level operations : `Batch Normalization`, `Convolution`, `De-Convolution` and `Residual Block` . Lets follow the same order and write the generator network. 
@@ -157,17 +158,17 @@ with tf.variable_scope(scope, reuse=tf.AUTO_REUSE):
     for i in range(1, no_of_residual_blocks + 1):
         Y_res = residual_block(YD2, scope_name="R" + str(i))
 
-        # For Upsampling
-        YU1 = tf.nn.relu(batchnorm(deconvolution_layer(Y_res, output_channels * 2, filter_size=3, stride=2, padding="SAME", scope_name="U1")))
-        YU2 = tf.nn.relu(batchnorm(deconvolution_layer(YU1, output_channels, filter_size=3, stride=2, padding="SAME", scope_name="U2")))
-        Y_out = tf.nn.tanh(convolution_layer(YU2, filter_size=7, stride=1, o_c=3, padding="SAME", scope_name="U3"))
+   # For Upsampling
+   YU1 = tf.nn.relu(batchnorm(deconvolution_layer(Y_res, output_channels * 2, filter_size=3, stride=2, padding="SAME", scope_name="U1")))
+   YU2 = tf.nn.relu(batchnorm(deconvolution_layer(YU1, output_channels, filter_size=3, stride=2, padding="SAME", scope_name="U2")))
+   Y_out = tf.nn.tanh(convolution_layer(YU2, filter_size=7, stride=1, o_c=3, padding="SAME", scope_name="U3"))
 
-        return Y_out
+   return Y_out
 ```
 
 With this we are done with the proper implementation of the generator network. 
 
-Feel free to reuse our [Generator code](https://github.com/CycleGANS/V1.0), and of course keep an eye on our [blog](https://cyclegans.github.io). Comments, corrections and feedback are welcome.
+Feel free to reuse our [Generator code](https://github.com/CycleGANS/CS543CycleGANsProject/blob/master/Generator.py), and of course keep an eye on our [blog](https://cyclegans.github.io). Comments, corrections and feedback are welcome.
 
 
 
