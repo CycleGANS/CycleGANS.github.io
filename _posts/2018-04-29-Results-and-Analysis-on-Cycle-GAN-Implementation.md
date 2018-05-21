@@ -70,3 +70,10 @@ We have tested our network implementation in 5 different datasets : `horse2zebra
 #### Horse - Zebra
 
 <img src= "{{ "/img/Naman/Results/horsetozebra_good.png" | prepend: site.baseurl }}">
+
+<center><em>Figure 1: Horse to Zebra translation</em></center>
+
+<img src= "{{ "/img/Naman/Results/zebratohorse_good.png" | prepend: site.baseurl }}">
+
+<center><em>Figure 2: Zebra to Horse translation</em></center>
+
