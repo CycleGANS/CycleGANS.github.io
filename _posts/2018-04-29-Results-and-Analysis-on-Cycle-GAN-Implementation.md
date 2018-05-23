@@ -38,8 +38,7 @@ If you want to implement our code off the shelf, you can find the entire code fo
 The dependencies can be installed by following the commands :
 
 ```
-git clone https://github.com/CycleGANS/V1.0.git
-cd CycleGAN
+git clone https://github.com/CycleGANS/CS543CycleGANsProject.git
 sh ./download_dataset.sh horse2zebra
 mv datasets Datasets
 pip install -r requirements.txt
