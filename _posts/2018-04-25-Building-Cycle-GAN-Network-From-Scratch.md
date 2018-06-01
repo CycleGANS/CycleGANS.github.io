@@ -71,7 +71,7 @@ def batch(sess, dataset):
 
 ## Network Training
 
-This is the most crucial part of the entire implementation. The entire code is available in our [repository](https://github.com/CycleGANS/V1.0/blob/master/CycleGAN/train.py).  We will be following the following algorithm to create the training method. 
+This is the most crucial part of the entire implementation. The entire code is available in our [repository](https://github.com/CycleGANS/CS543CycleGANsProject/blob/master/train.py).  We will be following the following algorithm to create the training method. 
 
 > We will be following the same network flow diagram presented in our [theoretical blog](https://cyclegans.github.io/project1/2018/04/18/Theoretical-Understanding-of-CGANs/). Its a good idea to keep this flow chart in the mind :)
 
@@ -226,7 +226,7 @@ sess.close()
 
 > **Additional Helper Function**: This function makes sure that the range of the images generated is between 0 and 255. This function is taken [LynnHo's repository](https://github.com/LynnHo/CycleGAN-Tensorflow-PyTorch/blob/master/image_utils.py). 
 >
-> ```pytho
+> ```python
 > def _to_range(images, min_value=0.0, max_value=1.0, dtype=None):
 >     # transform images from [-1.0, 1.0] to [min_value, max_value] of dtype
 >     assert \
